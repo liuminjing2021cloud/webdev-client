@@ -32,6 +32,16 @@ export default function Modules() {
         </Module>
         <Module title="Week 2"><Lesson title="LEARNING OBJECTIVES"><li className="wd-content-item">Learn how to create user interfaces with HTML</li></Lesson></Module>
         <Module title="Week 3"><Lesson title="LEARNING OBJECTIVES"><li className="wd-content-item">CSS Styling</li></Lesson></Module>
+        <Module title="Minjing's CS 5010 Practice">
+          <Lesson title="Java Practice">
+            <li className="wd-content-item">Practice object-oriented design and unit testing</li>
+          </Lesson>
+        </Module>
+        <Module title="AI Sample Module">
+          <Lesson title="RESPONSIVE DESIGN">
+            <li className="wd-content-item">Compare Flexbox and CSS Grid layouts</li>
+          </Lesson>
+        </Module>
       </ul>
     </div>
   );

@@ -34,6 +34,14 @@ export default function CourseNavigation({ cid }: { cid: string }) {
         People
       </Link>{" "}
       <br />
+      <Link href="/labs/lab2" id="wd-personal-course-resource-link">
+        My CSS Resources
+      </Link>{" "}
+      <br />
+      <Link href="/labs" id="wd-ai-course-help-link">
+        AI Course Help
+      </Link>{" "}
+      <br />
     </div>
   );
 }

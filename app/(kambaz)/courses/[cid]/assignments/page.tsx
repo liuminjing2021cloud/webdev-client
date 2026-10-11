@@ -10,5 +10,7 @@ export default async function Assignments({params}:{params:Promise<{cid:string}>
  <AssignmentItem cid={cid} aid="a1" title="A1 - ENV + HTML" details="Multiple Modules | Not available until May 6 at 12:00am | Due May 13 at 11:59pm | 100 pts" />
  <AssignmentItem cid={cid} aid="a2" title="A2 - CSS + TAILWIND" details="Multiple Modules | Not available until May 13 at 12:00am | Due May 20 at 11:59pm | 100 pts" />
  <AssignmentItem cid={cid} aid="a3" title="A3 - JAVASCRIPT + REACT" details="Multiple Modules | Not available until May 20 at 12:00am | Due May 27 at 11:59pm | 100 pts" />
+ <AssignmentItem cid={cid} aid="personal" title="PERSONAL - CS 5010 DESIGN PRACTICE" details="My assignment | Practice object-oriented design | 100 pts" />
+ <AssignmentItem cid={cid} aid="ai-sample" title="AI SAMPLE - RESPONSIVE PAGE" details="AI sample | Practice responsive CSS and Tailwind | 100 pts" />
  </ul></div>;
 }

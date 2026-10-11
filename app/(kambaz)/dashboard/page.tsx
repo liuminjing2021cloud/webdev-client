@@ -7,8 +7,8 @@ export default function Dashboard() {
       <div id="wd-dashboard-courses">
         <CourseCard
           id="1234"
-          title="CS1234 React JS"
-          subtitle="Full Stack software developer"
+          title="CS5010 Programming Design Paradigm"
+          subtitle="My course: object-oriented design and testing"
           image="/images/reactjs.svg"
         />
         <CourseCard
@@ -22,6 +22,12 @@ export default function Dashboard() {
           title="CS3456 MongoDB"
           subtitle="NoSQL Databases"
           image="/images/mongodb.svg"
+        />
+        <CourseCard
+          id="4567"
+          title="CS4550 Web Development"
+          subtitle="AI sample course: responsive full-stack applications"
+          image="/images/teslabot.jpg"
         />
       </div>
     </div>

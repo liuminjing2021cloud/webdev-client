@@ -1,0 +1,295 @@
+#wd-lab2 {
+  padding: 20px;
+}
+
+#wd-lab2 section {
+  margin-bottom: 24px;
+}
+
+#wd-id-selector {
+  background-color: lightblue;
+  color: darkblue;
+}
+
+.wd-class-selector {
+  background-color: lightgreen;
+  color: darkgreen;
+}
+
+.wd-document-structure p {
+  background-color: lightpink;
+  color: darkred;
+}
+
+#wd-react-icons svg {
+  font-size: 30px;
+  margin-right: 12px;
+}
+
+.wd-check-icon {
+  color: green;
+}
+
+.wd-trash-icon {
+  color: red;
+}
+
+.wd-personal-school-icon { color: #111; }
+.wd-personal-book-icon { color: navy; }
+.wd-ai-bulb-icon { color: darkorange; }
+.wd-ai-person-icon { color: purple; }
+
+.wd-fg-color-blue {
+  color: blue;
+}
+
+.wd-fg-color-red {
+  color: red;
+}
+
+.wd-bg-color-yellow {
+  background-color: yellow;
+}
+
+.wd-bg-color-green {
+  background-color: lightgreen;
+}
+
+.wd-border-thin {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.wd-border-dashed {
+  border: 3px dashed red;
+  padding: 10px;
+}
+
+.wd-border-colored {
+  border: 5px solid blue;
+  padding: 10px;
+}
+
+.wd-spacing-container {
+  background-color: lightgray;
+  border: 2px solid black;
+}
+
+.wd-padding-example {
+  background-color: lightblue;
+  border: 2px solid blue;
+  padding: 10px 20px 30px 40px;
+}
+
+.wd-margin-example {
+  background-color: lightgreen;
+  border: 2px solid green;
+  margin: 30px;
+}
+
+.wd-box-model-example {
+  width: 300px;
+  padding: 20px;
+  border: 10px solid orange;
+  margin: 30px;
+  background-color: lightyellow;
+}
+
+.wd-rounded-corners-small {
+  width: 250px;
+  padding: 20px;
+  margin-bottom: 15px;
+  background-color: lightblue;
+  border: 3px solid blue;
+  border-radius: 10px;
+}
+
+.wd-rounded-corners-large {
+  width: 250px;
+  padding: 20px;
+  margin-bottom: 15px;
+  background-color: lightgreen;
+  border: 3px solid green;
+  border-radius: 30px;
+}
+
+.wd-rounded-corners-circle {
+  width: 100px;
+  height: 100px;
+  background-color: pink;
+  border: 3px solid red;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wd-dimension-box {
+  width: 300px;
+  height: 100px;
+  background-color: lightcyan;
+  border: 3px solid darkcyan;
+}
+
+.wd-dimension-percent {
+  width: 50%;
+  height: 60px;
+  margin-top: 15px;
+  background-color: lavender;
+  border: 3px solid purple;
+}
+
+.wd-display-block {
+  display: block;
+  width: 200px;
+  padding: 10px;
+  margin-bottom: 5px;
+  background-color: lightblue;
+  border: 2px solid blue;
+}
+
+.wd-display-inline {
+  display: inline;
+  width: 200px;
+  padding: 10px;
+  background-color: lightgreen;
+  border: 2px solid green;
+}
+
+.wd-display-inline-block {
+  display: inline-block;
+  width: 200px;
+  padding: 10px;
+  margin-top: 15px;
+  background-color: lightpink;
+  border: 2px solid red;
+}
+
+.wd-float-container {
+  width: 500px;
+  padding: 15px;
+  overflow: auto;
+  background-color: lightgray;
+  border: 2px solid gray;
+}
+
+.wd-float-box {
+  float: left;
+  width: 120px;
+  height: 80px;
+  padding: 10px;
+  margin-right: 15px;
+  background-color: orange;
+  border: 2px solid darkorange;
+}
+
+.wd-grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 600px;
+}
+
+.wd-grid-item {
+  padding: 20px;
+  text-align: center;
+  background-color: lightblue;
+  border: 2px solid blue;
+}
+
+.wd-flex-container {
+  display: flex;
+  gap: 10px;
+  width: 600px;
+  padding: 10px;
+  background-color: lightgray;
+  border: 2px solid gray;
+}
+
+.wd-flex-item {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+  background-color: lightgreen;
+  border: 2px solid green;
+}
+
+.wd-responsive-box {
+  padding: 30px;
+  font-size: 20px;
+  background-color: lightblue;
+  border: 3px solid blue;
+}
+
+@media (max-width: 600px) {
+  .wd-responsive-box {
+    font-size: 14px;
+    background-color: lightpink;
+    border-color: red;
+  }
+
+  .wd-flex-container {
+    width: auto;
+    flex-direction: column;
+  }
+
+  .wd-grid-container {
+    width: auto;
+    grid-template-columns: 1fr;
+  }
+}
+
+#wd-practice-extensions {
+  padding: 20px;
+  border: 2px solid #222;
+}
+
+.wd-own-sample, .wd-ai-sample { margin: 20px 0; }
+.wd-own-highlight { padding: 12px; color: white; background: #222; }
+.wd-ai-box { width: min(420px, 100%); margin: 15px; padding: 20px; border: 4px double #333; border-radius: 12px; }
+.wd-own-flex { display: flex; gap: 10px; }
+.wd-own-flex span { flex: 1; padding: 15px; text-align: center; color: white; background: #333; }
+.wd-ai-responsive-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.wd-ai-responsive-grid span { padding: 12px; text-align: center; background: #ddd; border: 1px solid #555; }
+
+@media (max-width: 600px) {
+  .wd-own-flex { flex-direction: column; }
+  .wd-ai-responsive-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+.wd-position-container {
+  position: relative;
+  width: 400px;
+  height: 250px;
+  background-color: lightgray;
+  border: 2px solid black;
+}
+
+.wd-position-box {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  padding: 10px;
+  color: white;
+}
+
+.wd-position-red {
+  top: 20px;
+  left: 20px;
+  background-color: red;
+  z-index: 1;
+}
+
+.wd-position-blue {
+  top: 60px;
+  left: 60px;
+  background-color: blue;
+  z-index: 3;
+}
+
+.wd-position-green {
+  top: 100px;
+  left: 100px;
+  background-color: green;
+  z-index: 2;
+}

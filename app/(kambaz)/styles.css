@@ -1,0 +1,185 @@
+* { box-sizing: border-box; }
+
+#wd-kambaz-layout {
+  display: flex;
+  min-height: 100vh;
+  color: #2d2d2d;
+  background: white;
+}
+
+#wd-kambaz-content { flex: 1; min-width: 0; padding: 28px; }
+
+#wd-kambaz-navigation {
+  width: 120px;
+  flex-shrink: 0;
+  padding: 18px 10px;
+  text-align: center;
+  background: #111;
+}
+
+#wd-kambaz-navigation a {
+  display: block;
+  padding: 13px 6px;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+#wd-kambaz-navigation a:hover { background: #333; color: #ff4d4d; }
+#wd-neu-link { color: #d41b2c !important; font-weight: 700; }
+#wd-kambaz-navigation svg { display: block; margin: 0 auto 5px; font-size: 22px; }
+
+#wd-dashboard { max-width: 1200px; margin: 0 auto; }
+#wd-dashboard-title { font-size: 32px; margin-bottom: 16px; }
+#wd-dashboard-published { font-size: 22px; margin: 22px 0; }
+#wd-dashboard-courses { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 26px; }
+
+.wd-dashboard-course {
+  overflow: hidden;
+  background: white;
+  border: 1px solid #d6d6d6;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 12%);
+}
+
+.wd-dashboard-course-link { display: block; color: inherit; text-decoration: none; }
+.wd-dashboard-course img { width: 100%; height: 150px; object-fit: cover; }
+.wd-dashboard-course-link > div { padding: 16px; }
+.wd-dashboard-course h5 { margin: 0 0 8px; color: #b52828; font-size: 18px; }
+.wd-dashboard-course p { margin: 0 0 15px; color: #666; }
+.wd-dashboard-course button, #wd-modules ~ button { padding: 8px 15px; }
+
+.wd-course-layout { display: flex; align-items: flex-start; gap: 28px; }
+.wd-course-content { flex: 1; min-width: 0; }
+
+#wd-courses-navigation { width: 180px; flex-shrink: 0; }
+#wd-courses-navigation a {
+  display: block;
+  padding: 10px 14px;
+  color: #b52828;
+  text-decoration: none;
+  border-left: 3px solid transparent;
+}
+#wd-courses-navigation a:hover { background: #f2f2f2; border-left-color: #b52828; }
+
+#wd-modules, .wd-lessons, .wd-content, #wd-assignment-list { padding: 0; list-style: none; }
+#wd-modules { margin-top: 20px; border: 1px solid #c7c7c7; }
+.wd-module > .wd-title {
+  padding: 14px 18px;
+  font-weight: 700;
+  background: #e8e8e8;
+  border-bottom: 1px solid #c7c7c7;
+}
+.wd-lesson > .wd-title { display: block; padding: 12px 18px; font-weight: 700; border-bottom: 1px solid #ddd; }
+.wd-content-item { padding: 12px 28px; border-bottom: 1px solid #e4e4e4; border-left: 4px solid #27864a; }
+
+#wd-home { display: flex; align-items: flex-start; gap: 30px; }
+.wd-home-modules { flex: 1; min-width: 0; }
+#wd-course-status { width: 260px; flex-shrink: 0; }
+#wd-course-status h2 { font-size: 20px; }
+#wd-course-status button { width: 100%; margin-bottom: 8px; padding: 9px; border: 1px solid #aaa; background: #f7f7f7; border-radius: 4px; }
+
+#wd-assignments { max-width: 1000px; }
+#wd-search-assignment { width: min(420px, 100%); padding: 10px; margin: 0 8px 18px 0; border: 1px solid #aaa; border-radius: 5px; }
+#wd-add-assignment-group, #wd-add-assignment { padding: 10px 14px; margin-right: 6px; border: 0; border-radius: 5px; }
+#wd-add-assignment { color: white; background: #c62828; }
+#wd-assignments-title { padding: 14px; background: #e8e8e8; border: 1px solid #bbb; }
+.wd-assignment-list-item { padding: 16px 20px; border: 1px solid #ddd; border-left: 5px solid #2b8a4b; }
+.wd-assignment-link { color: #222; font-weight: 700; text-decoration: none; }
+.wd-assignment-list-item p { margin: 6px 0 0; color: #666; font-size: 14px; }
+
+.wd-table-responsive { overflow-x: auto; }
+#wd-people-table table { width: 100%; border-collapse: collapse; }
+#wd-people-table th { text-align: left; background: #eee; }
+#wd-people-table th, #wd-people-table td { padding: 12px; border: 1px solid #ccc; }
+#wd-people-table tbody tr:nth-child(even) { background: #f8f8f8; }
+
+#wd-kambaz-account { display: flex; align-items: flex-start; gap: 35px; }
+#wd-account-navigation {
+  width: 170px;
+  flex-shrink: 0;
+  border: 1px solid #222;
+}
+#wd-account-navigation a {
+  display: block;
+  padding: 12px 16px;
+  color: #111;
+  text-decoration: none;
+  border-bottom: 1px solid #bbb;
+}
+#wd-account-navigation a:last-of-type { border-bottom: 0; }
+#wd-account-navigation a:hover { color: white; background: #111; }
+.wd-account-content { flex: 1; max-width: 760px; }
+
+#wd-signin-screen, #wd-signup-screen, #wd-profile-screen {
+  padding: 0;
+  background: white;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+#wd-signin-screen h3, #wd-signup-screen h3, #wd-profile-screen h3 {
+  margin: 0 0 24px;
+  padding-bottom: 12px;
+  font-size: 28px;
+  border-bottom: 2px solid #111;
+}
+
+#wd-signin-screen label, #wd-signup-screen label, #wd-profile-screen label {
+  display: block;
+  margin: 12px 0 5px;
+  font-weight: 700;
+}
+
+#wd-signin-screen input, #wd-signup-screen input,
+#wd-profile-screen input, #wd-profile-screen select {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #222;
+  border-radius: 0;
+  background: white;
+}
+
+#wd-signin-screen input:focus, #wd-signup-screen input:focus,
+#wd-profile-screen input:focus, #wd-profile-screen select:focus,
+#wd-assignments-editor input:focus, #wd-assignments-editor textarea:focus,
+#wd-assignments-editor select:focus {
+  outline: 2px solid #111;
+  outline-offset: 1px;
+}
+
+#wd-signin-btn, #wd-signup-screen a:first-of-type {
+  display: inline-block;
+  padding: 10px 18px;
+  margin: 18px 0 10px;
+  color: white;
+  background: #111;
+  border: 1px solid #111;
+  border-radius: 0;
+  text-decoration: none;
+}
+
+#wd-assignments-editor { max-width: 900px; color: #111; }
+#wd-assignments-editor > label { display: block; margin: 12px 0 6px; font-weight: 700; }
+#wd-name, #wd-description { width: 100%; padding: 11px; border: 1px solid #222; border-radius: 0; }
+#wd-assignments-editor table { width: 100%; margin: 20px 0; border-collapse: separate; border-spacing: 0 14px; }
+#wd-assignments-editor td:first-child { width: 180px; padding: 10px 18px 10px 0; font-weight: 700; }
+#wd-assignments-editor td:last-child { padding: 12px; border: 1px solid #777; border-radius: 0; }
+#wd-assignments-editor input:not([type="checkbox"]), #wd-assignments-editor select { width: 100%; padding: 10px; border: 1px solid #222; border-radius: 0; background: white; }
+#wd-assignments-editor fieldset { margin-top: 15px; padding: 15px; border: 1px solid #222; }
+#wd-assignments-editor input[type="checkbox"] { margin: 6px 8px 6px 0; }
+#wd-cancel, #wd-save { display: inline-block; padding: 10px 20px; border: 1px solid #111; border-radius: 0; text-decoration: none; }
+#wd-cancel { color: #111; background: white; }
+#wd-save { color: white; background: #111; }
+
+@media (max-width: 768px) {
+  #wd-kambaz-layout { flex-direction: column; }
+  #wd-kambaz-navigation { width: 100%; display: flex; overflow-x: auto; text-align: left; }
+  #wd-kambaz-navigation a { white-space: nowrap; }
+  .wd-course-layout, #wd-home { flex-direction: column; }
+  #wd-courses-navigation, #wd-course-status { width: 100%; }
+  #wd-kambaz-account { flex-direction: column; }
+  #wd-account-navigation { display: flex; width: 100%; }
+  #wd-assignments-editor td { display: block; width: 100% !important; }
+}

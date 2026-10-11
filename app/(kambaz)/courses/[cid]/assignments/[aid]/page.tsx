@@ -5,6 +5,8 @@ export default async function AssignmentEditor({params}:{params:Promise<{cid:str
  <label htmlFor="wd-name">Assignment Name</label><br /><input id="wd-name" defaultValue="A1 - ENV + HTML" /><br /><br />
  <label htmlFor="wd-description">Description</label><br />
  <textarea id="wd-description" rows={5} cols={50} defaultValue="The assignment is available online. Submit a link to the landing page of your Web application running on Vercel." /><br />
+ <label htmlFor="wd-ai-review-note">AI Review Note</label><br />
+ <input id="wd-ai-review-note" defaultValue="Check the responsive layout before submitting." /><br />
  <table><tbody>
  <tr><td align="right" valign="top"><label htmlFor="wd-points">Points</label></td><td><input type="number" id="wd-points" defaultValue={100} /></td></tr>
  <tr><td align="right"><label htmlFor="wd-group">Assignment Group</label></td><td><select id="wd-group" defaultValue="ASSIGNMENTS"><option>ASSIGNMENTS</option><option>QUIZZES</option><option>EXAMS</option><option>PROJECT</option></select></td></tr>

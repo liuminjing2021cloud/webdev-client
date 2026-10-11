@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FaUniversity, FaUserCircle, FaTachometerAlt, FaBook, FaCalendarAlt, FaInbox, FaFlask, FaQuestionCircle } from "react-icons/fa";
 export default function KambazNavigation() {
   return (
     <div id="wd-kambaz-navigation">
@@ -8,33 +9,36 @@ export default function KambazNavigation() {
         target="_blank"
         rel="noreferrer"
       >
-        Northeastern
+        <FaUniversity /> Northeastern
       </a>
       <br />
       <Link href="/account" id="wd-account-link">
-        Account
+        <FaUserCircle /> Account
       </Link>
       <br />
       <Link href="/dashboard" id="wd-dashboard-link">
-        Dashboard
+        <FaTachometerAlt /> Dashboard
       </Link>
       <br />
       <Link href="/dashboard" id="wd-course-link">
-        Courses
+        <FaBook /> Courses
       </Link>
       <br />
       <Link href="/calendar" id="wd-calendar-link">
-        Calendar
+        <FaCalendarAlt /> Calendar
       </Link>
       <br />
       <Link href="/inbox" id="wd-inbox-link">
-        Inbox
+        <FaInbox /> Inbox
       </Link>
       <br />
       <Link href="/labs" id="wd-labs-link">
-        Labs
+        <FaFlask /> Labs
       </Link>
       <br />
+      <Link href="/labs" id="wd-ai-nav-help">
+        <FaQuestionCircle /> AI Help
+      </Link>
     </div>
   );
 }

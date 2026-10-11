@@ -8,5 +8,7 @@ export default function CourseStatus() {
 <button type="button">New Announcement</button><br />
 <button type="button">New Analytics</button><br />
 <button type="button">View Course Notifications</button><br />
+<button type="button" id="wd-personal-status-action">Review CS 5010 Progress</button><br />
+<button type="button" id="wd-ai-status-action">AI Study Suggestions</button><br />
  </div>;
 }
