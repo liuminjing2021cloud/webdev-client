@@ -183,6 +183,22 @@
   border: 2px solid darkorange;
 }
 
+.wd-float-left {
+  float: left;
+  height: 100px;
+  margin: 0 1rem 0.5rem 0;
+}
+
+.wd-float-right {
+  float: right;
+  height: 100px;
+  margin: 0 0 0.5rem 1rem;
+}
+
+.wd-float-done {
+  clear: both;
+}
+
 .wd-grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -264,6 +280,30 @@
   background-color: lightgray;
   border: 2px solid black;
 }
+
+.wd-bg-color-gray { background-color: lightgray; }
+.wd-bg-color-yellow { background-color: yellow; }
+.wd-bg-color-blue { background-color: blue; }
+.wd-bg-color-red { background-color: red; }
+.wd-fg-color-white { color: white; }
+.wd-dimension-portrait { width: 75px; height: 100px; }
+.wd-dimension-landscape { width: 100px; height: 75px; }
+.wd-dimension-square { width: 75px; height: 75px; }
+.wd-pos-relative-nudge-up-right { position: relative; bottom: 30px; left: 30px; }
+.wd-pos-relative-nudge-down-right { position: relative; top: 20px; left: 20px; }
+.wd-pos-relative { position: relative; }
+.wd-position-demo { height: 150px; margin-bottom: 30px; }
+.wd-pos-absolute-10-10 { position: absolute; top: 10px; left: 10px; }
+.wd-pos-absolute-50-50 { position: absolute; top: 50px; left: 50px; }
+.wd-pos-absolute-120-20 { position: absolute; top: 20px; left: 120px; }
+.wd-pos-fixed {
+  position: fixed;
+  right: 0;
+  bottom: 50%;
+  padding: 8px;
+  z-index: 30;
+}
+.wd-zindex-bring-to-front { z-index: 10; }
 
 .wd-position-box {
   position: absolute;

@@ -139,33 +139,53 @@ export default function Lab2() {
             </div>
         </section>
 
-        <section id="wd-css-position">
-            <h3>Position and Z-index</h3>
-
-            <div className="wd-position-container">
-                <div className="wd-position-box wd-position-red">
-                    Red
-                </div>
-
-                <div className="wd-position-box wd-position-blue">
-                    Blue
-                </div>
-
-                <div className="wd-position-box wd-position-green">
-                    Green
-                </div>
+        <section id="wd-css-positions">
+          <h3>Positions</h3>
+          <div id="wd-css-position-relative">
+            <h4>Relative position</h4>
+            <div className="wd-bg-color-gray">
+              <div className="wd-bg-color-yellow wd-dimension-portrait">
+                <div className="wd-pos-relative-nudge-down-right">Portrait</div>
+              </div>
+              <div className="wd-pos-relative-nudge-up-right wd-bg-color-blue wd-fg-color-white wd-dimension-landscape">
+                Landscape
+              </div>
+              <div className="wd-bg-color-red wd-dimension-square">Square</div>
             </div>
+          </div>
+
+          <div id="wd-css-position-absolute">
+            <h4>Absolute position</h4>
+            <div className="wd-pos-relative wd-position-demo">
+              <div className="wd-pos-absolute-10-10 wd-bg-color-yellow wd-dimension-portrait">Portrait</div>
+              <div className="wd-pos-absolute-50-50 wd-bg-color-blue wd-fg-color-white wd-dimension-landscape">Landscape</div>
+              <div className="wd-pos-absolute-120-20 wd-bg-color-red wd-dimension-square">Square</div>
+            </div>
+          </div>
+
+          <div id="wd-css-position-fixed">
+            <h4>Fixed position</h4>
+            <p>The blue badge stays fixed while the page scrolls.</p>
+            <div className="wd-pos-fixed wd-bg-color-blue wd-fg-color-white">Fixed</div>
+          </div>
+
+          <div id="wd-z-index">
+            <h4>Z-index</h4>
+            <div className="wd-pos-relative wd-position-demo">
+              <div className="wd-pos-absolute-10-10 wd-bg-color-yellow wd-dimension-portrait">Portrait</div>
+              <div className="wd-zindex-bring-to-front wd-pos-absolute-50-50 wd-bg-color-blue wd-fg-color-white wd-dimension-landscape">Landscape</div>
+              <div className="wd-pos-absolute-120-20 wd-bg-color-red wd-dimension-square">Square</div>
+            </div>
+          </div>
         </section>
 
-        <section id="wd-css-float">
+        <section id="wd-float-divs">
           <h3>Float</h3>
           <div className="wd-float-container">
-            <div className="wd-float-box">Float Left</div>
-            <p>
-              This paragraph flows around the floating box. Float moves an
-              element to one side and allows the following text to appear next
-              to it.
-            </p>
+            <div className="wd-float-left wd-dimension-portrait wd-bg-color-yellow">Left</div>
+            <div className="wd-float-right wd-dimension-landscape wd-bg-color-blue wd-fg-color-white">Right</div>
+            <p>This paragraph flows between the two floating boxes. Float moves each box to one side while text wraps beside it.</p>
+            <div className="wd-float-done" />
           </div>
         </section>
 
