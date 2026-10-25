@@ -26,6 +26,7 @@
 }
 
 #wd-kambaz-navigation a:hover { background: #333; color: #ff4d4d; }
+#wd-kambaz-navigation a.wd-active, #wd-courses-navigation a.wd-active { background: #f2f2f2; color: #b52828; font-weight: 700; }
 #wd-neu-link { color: #d41b2c !important; font-weight: 700; }
 #wd-kambaz-navigation svg { display: block; margin: 0 auto 5px; font-size: 22px; }
 

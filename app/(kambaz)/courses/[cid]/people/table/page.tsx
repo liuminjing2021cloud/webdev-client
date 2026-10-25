@@ -1,14 +1,11 @@
-const people = [
-  ["Alice Wonderland", "alice", "Student", "Section 01"],
-  ["Bob Hope", "bob", "Student", "Section 01"],
-  ["Charlie Brown", "charlie", "Teacher", "Section 01"],
-  ["Minjing Liu", "minjing", "Student", "Section 01"],
-  ["Diana Prince", "diana", "Student", "Section 02"],
-  ["Edward Smith", "edward", "Teaching Assistant", "Section 02"],
-  ["Fiona Green", "fiona", "Student", "Section 02"],
-];
+import users from "../../../../database/users.json";
+import enrollments from "../../../../database/enrollments.json";
 
-export default function Page() {
+export default async function Page({ params }: { params: Promise<{ cid: string }> }) {
+  const { cid } = await params;
+  const people = users.filter((user) => enrollments.some(
+    (enrollment) => enrollment.user === user._id && enrollment.course === cid,
+  ));
   return (
     <div id="wd-people-table">
       <h2>People</h2>
@@ -16,8 +13,8 @@ export default function Page() {
         <table>
           <thead><tr><th>Name</th><th>Login ID</th><th>Role</th><th>Section</th></tr></thead>
           <tbody>
-            {people.map(([name, login, role, section]) => (
-              <tr key={login}><td>{name}</td><td>{login}</td><td>{role}</td><td>{section}</td></tr>
+            {people.map((user) => (
+              <tr key={user._id}><td>{user.firstName} {user.lastName}</td><td>{user.loginId}</td><td>{user.role}</td><td>{user.section}</td></tr>
             ))}
           </tbody>
         </table>

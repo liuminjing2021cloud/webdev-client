@@ -1,5 +1,7 @@
 import { ReactNode } from "react";
 import CourseNavigation from "./Navigation";
+import Breadcrumb from "./Breadcrumb";
+import courses from "../../database/courses.json";
 export default async function CoursesLayout({
   children,
   params,
@@ -8,9 +10,10 @@ export default async function CoursesLayout({
   params: Promise<{ cid: string }>;
 }>) {
   const { cid } = await params;
+  const course = courses.find((item) => item._id === cid);
   return (
     <div id="wd-courses">
-      <h2>Courses {cid}</h2>
+      <Breadcrumb courseName={course?.name ?? `Course ${cid}`} courseId={cid} />
       <hr />
       <div className="wd-course-layout">
         <CourseNavigation cid={cid} />

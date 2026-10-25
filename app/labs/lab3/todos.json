@@ -1,0 +1,7 @@
+[
+  { "id": "todo-1", "title": "Read the Chapter 3 overview", "completed": true },
+  { "id": "todo-2", "title": "Practice JavaScript arrays", "completed": true },
+  { "id": "todo-3", "title": "Build dynamic routes", "completed": false },
+  { "id": "todo-4", "title": "Render Kambaz from JSON", "completed": false },
+  { "id": "todo-5", "title": "Email the TA", "status": "COMPLETED", "completed": true }
+]

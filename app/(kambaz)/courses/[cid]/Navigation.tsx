@@ -1,47 +1,19 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 export default function CourseNavigation({ cid }: { cid: string }) {
+  const pathname = usePathname();
+  const links = ["Home", "Modules", "Assignments", "People", "Announcements"];
   return (
     <div id="wd-courses-navigation">
-      <Link href={`/courses/${cid}/home`} id="wd-course-home-link">
-        Home
-      </Link>{" "}
-      <br />
-      <Link href={`/courses/${cid}/modules`} id="wd-course-modules-link">
-        Modules
-      </Link>{" "}
-      <br />
-      <Link href={`/courses/${cid}/piazza`} id="wd-course-piazza-link">
-        Piazza
-      </Link>{" "}
-      <br />
-      <Link href={`/courses/${cid}/zoom`} id="wd-course-zoom-link">
-        Zoom
-      </Link>{" "}
-      <br />
-      <Link href={`/courses/${cid}/assignments`} id="wd-course-assignments-link">
-        Assignments
-      </Link>{" "}
-      <br />
-      <Link href={`/courses/${cid}/quizzes`} id="wd-course-quizzes-link">
-        Quizzes
-      </Link>{" "}
-      <br />
-      <Link href={`/courses/${cid}/grades`} id="wd-course-grades-link">
-        Grades
-      </Link>{" "}
-      <br />
-      <Link href={`/courses/${cid}/people/table`} id="wd-course-people-link">
-        People
-      </Link>{" "}
-      <br />
-      <Link href="/labs/lab2" id="wd-personal-course-resource-link">
-        My CSS Resources
-      </Link>{" "}
-      <br />
-      <Link href="/labs" id="wd-ai-course-help-link">
-        AI Course Help
-      </Link>{" "}
-      <br />
+      {links.map((label) => {
+        const segment = label === "People" ? "people/table" : label.toLowerCase();
+        const href = `/courses/${cid}/${segment}`;
+        const active = pathname === href;
+        return <Link href={href} className={active ? "wd-active" : undefined} aria-current={active ? "page" : undefined} key={label}>{label}</Link>;
+      })}
     </div>
   );
 }

@@ -1,0 +1,38 @@
+#wd-lab3 section {
+  border-bottom: 1px solid #d1d5db;
+  margin: 1rem 0;
+  padding-bottom: 1rem;
+}
+
+#wd-lab3 pre {
+  background: #f3f4f6;
+  overflow-x: auto;
+  padding: 1rem;
+}
+
+.wd-box-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.wd-color-box,
+.wd-style-box {
+  min-width: 5.5rem;
+  padding: 0.75rem;
+}
+
+.wd-red { background: #fecaca; }
+.wd-orange { background: #fed7aa; }
+.wd-yellow { background: #fef08a; }
+.wd-green { background: #bbf7d0; }
+.wd-blue { background: #bfdbfe; }
+.wd-purple { background: #ddd6fe; }
+.wd-dynamic-green { background: #86efac; }
+
+.wd-highlight { background: yellow; color: #b91c1c; padding: 0.5rem; }
+
+.wd-lab-active {
+  color: #b91c1c;
+  font-weight: 700;
+}
