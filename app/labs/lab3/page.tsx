@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Pathname from "./Pathname";
-import ServerInfo from "./ServerInfo";
+import ClientComponentDemo from "./ClientComponentDemo";
+import ServerComponentDemo from "./ServerComponentDemo";
 import todos from "./todos.json";
 import "./index.css";
 
@@ -174,15 +174,8 @@ export default function Lab3() {
         </div>
       </section>
 
-      <section>
-        <h3>Client Components</h3>
-        <Pathname />
-      </section>
-
-      <section>
-        <h3>Server Components</h3>
-        <ServerInfo />
-      </section>
+      <ClientComponentDemo />
+      <ServerComponentDemo />
 
       <section>
         <h3>Child Components</h3>
