@@ -188,6 +188,7 @@ export default function Lab3() {
         <h3>Child Components</h3>
         <Add a={10} b={20} />
         <Add a={10} b={20} />
+        <p>a + b = 30</p>
         <Add a={3} b={4} />
         <Add a={7} b={8} />
         <p>Square of 4 = {4 * 4}</p>

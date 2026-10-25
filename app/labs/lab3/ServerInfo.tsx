@@ -3,10 +3,10 @@ import { join } from "node:path";
 
 export default function ServerInfo() {
   const files = readdirSync(join(process.cwd(), "app", "labs"));
+  const serverInformation = { arch: process.arch, pid: process.pid };
   return (
     <>
-      <p>Server information: arch = {process.arch}</p>
-      <p>pid = {process.pid}</p>
+      <pre>{JSON.stringify(serverInformation, null, 2)}</pre>
       <ul>
         {files.slice(0, 3).map((file) => <li key={file}>{file}</li>)}
       </ul>
