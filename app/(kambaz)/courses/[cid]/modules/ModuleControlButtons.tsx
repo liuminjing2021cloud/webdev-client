@@ -13,16 +13,24 @@ export default function ModuleControlButtons({
 }) {
   return (
     <div className="module-controls flex items-center gap-2">
-      <FaPencilAlt
-        className="cursor-pointer text-blue-600"
-        onClick={() => editModule(moduleId)}
+      <button
+        id={`wd-edit-module-${moduleId}`}
+        type="button"
+        aria-label="Edit module"
         title="Edit module"
-      />
-      <FaTrash
-        className="cursor-pointer text-red-600"
-        onClick={() => deleteModule(moduleId)}
+        onClick={() => editModule(moduleId)}
+      >
+        <FaPencilAlt className="cursor-pointer text-blue-600" title="Edit module" />
+      </button>
+      <button
+        id={`wd-delete-module-${moduleId}`}
+        type="button"
+        aria-label="Delete module"
         title="Delete module"
-      />
+        onClick={() => deleteModule(moduleId)}
+      >
+        <FaTrash className="cursor-pointer text-red-600" title="Delete module" />
+      </button>
       <FaCheckCircle className="text-green-600" title="Published module" />
       <BsPlus className="text-3xl" title="Add item" />
       <IoEllipsisVertical className="text-xl" title="More module options" />
