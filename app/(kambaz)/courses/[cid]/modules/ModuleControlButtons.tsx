@@ -21,6 +21,7 @@ export default function ModuleControlButtons({
         onClick={() => editModule(moduleId)}
       >
         <FaPencilAlt className="cursor-pointer text-blue-600" title="Edit module" />
+        <span className="sr-only">Edit</span>
       </button>
       <button
         id={`wd-delete-module-${moduleId}`}
@@ -30,6 +31,7 @@ export default function ModuleControlButtons({
         onClick={() => deleteModule(moduleId)}
       >
         <FaTrash className="cursor-pointer text-red-600" title="Delete module" />
+        <span className="sr-only">Delete</span>
       </button>
       <FaCheckCircle className="text-green-600" title="Published module" />
       <BsPlus className="text-3xl" title="Add item" />
