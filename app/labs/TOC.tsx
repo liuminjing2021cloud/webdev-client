@@ -2,7 +2,8 @@ import Link from "next/link";
 export default function TOC() {
   return (
     <nav aria-label="Labs navigation">
-      <p>Minjing Liu (Genesee)</p>
+      <p>Minjing Liu</p>
+      <a href="https://github.com/liuminjing2021cloud/webdev-client" target="_blank" rel="noreferrer">GitHub Repository</a><br />
       <Link href="/labs" id="wd-home-link">Home</Link><br />
       <Link href="/labs/lab1">Lab 1</Link><br />
       <Link href="/labs/lab2">Lab 2</Link><br />

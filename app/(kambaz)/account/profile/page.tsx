@@ -1,10 +1,16 @@
-import Link from "next/link";
+"use client";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
+import { useAccount } from "../AccountContext";
 export default function Profile() {
+  const { user, signOut } = useAccount(); const router = useRouter();
+  useEffect(() => { if (!user) router.replace("/account/signin"); }, [user, router]);
+  if (!user) return null;
   return (
     <div id="wd-profile-screen">
       <h3>Profile</h3>
       <input
-        defaultValue="alice"
+        defaultValue={user.username}
         placeholder="username"
         className="wd-username"
       />
@@ -16,10 +22,10 @@ export default function Profile() {
         className="wd-password"
       />
       <br />
-      <input defaultValue="Alice" placeholder="First Name" id="wd-firstname" />
+      <input defaultValue={user.firstName} placeholder="First Name" id="wd-firstname" />
       <br />
       <input
-        defaultValue="Wonderland"
+        defaultValue={user.lastName}
         placeholder="Last Name"
         id="wd-lastname"
       />
@@ -35,7 +41,7 @@ export default function Profile() {
         <option value="STUDENT">Student</option>
       </select>
       <br />
-      <Link href="/account/signin">Sign out</Link>
+      <button onClick={() => { signOut(); router.push("/account/signin"); }}>Sign out</button>
     </div>
   );
 }

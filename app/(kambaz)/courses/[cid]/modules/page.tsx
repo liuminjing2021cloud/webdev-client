@@ -1,38 +1,10 @@
-import Module from "./Module";
-import Lesson from "./Lesson";
+"use client";
+import { useState } from "react";
+import { KambazModule, useKambazStore } from "../../../store";
 export default function Modules() {
-  return (
-    <div>
-      <button type="button">Collapse All</button> <button type="button">View Progress</button>{" "}
-      <select defaultValue="publish-all">
-        <option value="publish-all">Publish All</option>
-      </select>{" "}
-      <button type="button">+ Module</button>
-      <ul id="wd-modules">
-        <Module title="Week 1, Lecture 1 - Course Introduction, Syllabus, Agenda">
-          <Lesson title="LEARNING OBJECTIVES">
-            <li className="wd-content-item">Introduction to the course</li>
-            <li className="wd-content-item">Learn what is Web Development</li>
-          </Lesson>
-          <Lesson title="READING">
-            <li className="wd-content-item">
-              Full Stack Developer - Chapter 1 - Introduction
-            </li>
-            <li className="wd-content-item">
-              Full Stack Developer - Chapter 2 - Creating User Interfaces
-            </li>
-          </Lesson>
-          <Lesson title="SLIDES">
-            <li className="wd-content-item">Introduction to Web Development</li>
-            <li className="wd-content-item">
-              Creating an HTTP server with Node.js
-            </li>
-            <li className="wd-content-item">Creating a React Application</li>
-          </Lesson>
-        </Module>
-        <Module title="Week 2"><Lesson title="LEARNING OBJECTIVES"><li className="wd-content-item">Learn how to create user interfaces with HTML</li></Lesson></Module>
-        <Module title="Week 3"><Lesson title="LEARNING OBJECTIVES"><li className="wd-content-item">CSS Styling</li></Lesson></Module>
-      </ul>
-    </div>
-  );
+  const modules = useKambazStore((state) => state.modules); const addModule = useKambazStore((state) => state.addModule); const updateModule = useKambazStore((state) => state.updateModule); const deleteModule = useKambazStore((state) => state.deleteModule);
+  const [newName, setNewName] = useState(""); const [editing, setEditing] = useState<KambazModule | null>(null);
+  return <div><button type="button">Collapse All</button> <button type="button">View Progress</button> <button onClick={() => { if (newName.trim()) { addModule(newName.trim()); setNewName(""); } }}>+ Module</button><input aria-label="New module" placeholder="New module name" value={newName} onChange={(event) => setNewName(event.target.value)} />
+    <ul id="wd-modules">{modules.map((module) => <li className="wd-module" key={module._id}>{editing?._id === module._id ? <><input aria-label="Edit module" value={editing.name} onChange={(event) => setEditing({ ...editing, name: event.target.value })} /><button onClick={() => { updateModule(editing); setEditing(null); }}>Save</button></> : <div className="wd-title">{module.name}</div>} <button aria-label="Edit module" title="Edit module" onClick={() => setEditing(module)}>Edit</button><button aria-label="Delete module" title="Delete module" onClick={() => deleteModule(module._id)}>Delete</button></li>)}</ul>
+  </div>;
 }
