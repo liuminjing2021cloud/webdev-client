@@ -17,7 +17,7 @@ export default function ModuleEditor() {
   return (
     <>
       <button id="wd-add-module-btn" type="button" aria-label="+ Module" onClick={() => setShow(true)}>
-        <FaPlus /> Module
+        <FaPlus aria-hidden="true" /> <span>+ Module</span>
       </button>
       {show && (
         <div id="wd-add-module-dialog" role="dialog" aria-modal="true" aria-label="Add Module">
