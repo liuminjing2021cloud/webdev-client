@@ -1,15 +1,13 @@
 import { useState } from "react";
 import { FaPlus } from "react-icons/fa";
-import { useKambazStore } from "../../../store";
 
-export default function ModuleEditor() {
+export default function ModuleEditor({ addModule }: { addModule: (name: string) => Promise<void> }) {
   const [show, setShow] = useState(false);
   const [moduleName, setModuleName] = useState("");
-  const addModule = useKambazStore((state) => state.addModule);
   const close = () => setShow(false);
-  const submit = () => {
+  const submit = async () => {
     if (moduleName.trim()) {
-      addModule(moduleName.trim());
+      await addModule(moduleName.trim());
       setModuleName("");
     }
     close();
