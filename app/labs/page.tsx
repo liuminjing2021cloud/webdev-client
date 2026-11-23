@@ -11,7 +11,7 @@ export default function Labs() {
         <li><Link href="/labs/lab4" id="wd-lab4-link">Lab 4</Link></li>
         <li><Link href="/labs/lab5">Lab 5</Link></li>
         <li><Link href="/" id="wd-kambaz-link">Kambaz</Link></li>
-        <li><Link href="https://github.com/liuminjing2021cloud/webdev-client"target="_blank">My GitHub Repository</Link></li>
+        <li><Link id="wd-github" href="https://github.com/liuminjing2021cloud/webdev-client" target="_blank">My GitHub Repository</Link></li>
         <li><a href="https://github.com/liuminjing2021cloud/webdev-server" target="_blank" rel="noreferrer">Node Server GitHub Repository</a></li>
         <li><a href={process.env.NEXT_PUBLIC_HTTP_SERVER ?? "http://localhost:4000"} target="_blank" rel="noreferrer">Node Server</a></li>
       </ul>
